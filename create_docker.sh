@@ -48,7 +48,7 @@ sudo docker run -itd \
                 --hostname $USER_NAME \
                 ${IMAGE}
 
-sudo docker exec -ti $USER_NAME sh -c "apt-get update && apt-get -y upgrade && apt-get install -y openssh-server ${PACKAGE}"
+sudo docker exec -ti $USER_NAME sh -c "apt-get update && apt-get install -y openssh-server ${PACKAGE}"
 
 
 sudo docker exec -ti $USER_NAME sh -c "echo \"root:${USER_PWD}\" | chpasswd;
